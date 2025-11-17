@@ -10,8 +10,8 @@
     py = pkgs.python311.withPackages(p: with p;[
         django
         flask
-        sqlite-utils
         requests
+        mariadb
         pyyaml
     ]
   );

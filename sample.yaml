@@ -1,0 +1,266 @@
+employees:
+  - id: 1
+    fname: John
+    lname: Doe
+    address: 123 Main St, Anchorage, AK 99501
+    active: True
+    pay:
+      type: wage
+      amount: 25.50 
+    hired_on: 2023-08-15 09:00:00 
+    
+  - id: 2
+    fname: Alice
+    lname: Smith
+    address: 45 Oak Ave, Miami, FL 33101
+    active: True
+    pay:
+      type: salary
+      amount: 65000 
+    hired_on: 2021-04-01 08:30:00
+
+  - id: 3
+    fname: Robert
+    lname: Brown
+    address: 789 Pine Ln, Seattle, WA 98104
+    active: False 
+    pay:
+      type: wage
+      amount: 18.75 
+    hired_on: 2024-01-20 10:15:00
+
+timestamps:
+  - id: 1
+    employee_id: 1
+    start: 2024-11-12 09:00:00 
+    end: 2024-11-12 12:00:00
+    action: work
+    
+  - id: 2
+    employee_id: 1
+    start: 2024-11-12 12:00:00 
+    end: 2024-11-12 12:30:00
+    action: break
+    
+  - id: 3
+    employee_id: 1
+    start: 2024-11-12 12:30:00 
+    end: 2024-11-12 17:00:00 
+    action: work
+
+  
+  - id: 4
+    employee_id: 2
+    start: 2024-11-12 08:30:00
+    end: 2024-11-12 10:00:00
+    action: work
+    
+  - id: 5
+    employee_id: 2
+    start: 2024-11-12 10:00:00 
+    end: 2024-11-12 10:15:00
+    action: break
+    
+  - id: 6
+    employee_id: 2
+    start: 2024-11-12 10:15:00
+    end: 2024-11-12 13:00:00 
+    action: work
+
+  - id: 7
+    employee_id: 3
+    start: 2024-01-25 14:00:00
+    end: 2024-01-25 19:00:00
+    action: work
+
+  - id: 8
+    employee_id: 1
+    start: 2024-11-13 09:00:00
+    end: 2024-11-13 12:00:00
+    action: work
+
+  - id: 9
+    employee_id: 1
+    start: 2024-11-13 12:00:00
+    end: 2024-11-13 12:30:00
+    action: break
+
+  - id: 10
+    employee_id: 1
+    start: 2024-11-13 12:30:00
+    end: 2024-11-13 17:00:00
+    action: work
+
+  - id: 11
+    employee_id: 1
+    start: 2024-11-14 09:00:00
+    end: 2024-11-14 17:00:00
+    action: work
+
+  - id: 12
+    employee_id: 1
+    start: 2024-11-15 09:00:00
+    end: 2024-11-15 12:00:00
+    action: work
+
+  - id: 13
+    employee_id: 1
+    start: 2024-11-15 12:00:00
+    end: 2024-11-15 13:00:00
+    action: break
+
+  - id: 14
+    employee_id: 1
+    start: 2024-11-15 13:00:00
+    end: 2024-11-15 17:00:00
+    action: work
+
+  - id: 15
+    employee_id: 2
+    start: 2024-11-13 08:30:00
+    end: 2024-11-13 16:30:00
+    action: work
+
+  - id: 16
+    employee_id: 2
+    start: 2024-11-14 08:30:00
+    end: 2024-11-14 12:30:00
+    action: work
+
+  - id: 17
+    employee_id: 2
+    start: 2024-11-14 12:30:00
+    end: 2024-11-14 13:00:00
+    action: break
+
+  - id: 18
+    employee_id: 2
+    start: 2024-11-14 13:00:00
+    end: 2024-11-14 16:30:00
+    action: work
+
+  - id: 19
+    employee_id: 2
+    start: 2024-11-15 08:30:00
+    end: 2024-11-15 16:30:00
+    action: work
+
+  - id: 20
+    employee_id: 1
+    start: 2024-11-18 09:00:00
+    end: 2024-11-18 17:00:00
+    action: work
+
+  - id: 21
+    employee_id: 1
+    start: 2024-11-19 09:00:00
+    end: 2024-11-19 12:00:00
+    action: work
+
+  - id: 22
+    employee_id: 1
+    start: 2024-11-19 12:00:00
+    end: 2024-11-19 13:00:00
+    action: break
+
+  - id: 23
+    employee_id: 1
+    start: 2024-11-19 13:00:00
+    end: 2024-11-19 17:00:00
+    action: work
+
+  - id: 24
+    employee_id: 1
+    start: 2024-11-20 09:00:00
+    end: 2024-11-20 17:00:00
+    action: work
+
+  - id: 25
+    employee_id: 1
+    start: 2024-11-21 09:00:00
+    end: 2024-11-21 12:00:00
+    action: work
+
+  - id: 26
+    employee_id: 1
+    start: 2024-11-21 12:00:00
+    end: 2024-11-21 12:30:00
+    action: break
+
+  - id: 27
+    employee_id: 1
+    start: 2024-11-21 12:30:00
+    end: 2024-11-21 17:00:00
+    action: work
+
+  - id: 28
+    employee_id: 1
+    start: 2024-11-22 09:00:00
+    end: 2024-11-22 17:00:00
+    action: work
+
+  - id: 29
+    employee_id: 1
+    start: 2024-11-25 09:00:00
+    end: 2024-11-25 12:00:00
+    action: work
+
+  - id: 30
+    employee_id: 1
+    start: 2024-11-25 12:00:00
+    end: 2024-11-25 12:30:00
+    action: break
+
+  - id: 31
+    employee_id: 1
+    start: 2024-11-25 12:30:00
+    end: 2024-11-25 17:00:00
+    action: work
+
+  - id: 32
+    employee_id: 2
+    start: 2024-11-18 08:30:00
+    end: 2024-11-18 16:30:00
+    action: work
+
+  - id: 33
+    employee_id: 2
+    start: 2024-11-19 08:30:00
+    end: 2024-11-19 16:30:00
+    action: work
+
+  - id: 34
+    employee_id: 2
+    start: 2024-11-20 08:30:00
+    end: 2024-11-20 12:30:00
+    action: work
+
+  - id: 35
+    employee_id: 2
+    start: 2024-11-20 12:30:00
+    end: 2024-11-20 13:00:00
+    action: break
+
+  - id: 36
+    employee_id: 2
+    start: 2024-11-20 13:00:00
+    end: 2024-11-20 16:30:00
+    action: work
+
+  - id: 37
+    employee_id: 2
+    start: 2024-11-21 08:30:00
+    end: 2024-11-21 16:30:00
+    action: work
+
+  - id: 38
+    employee_id: 2
+    start: 2024-11-22 08:30:00
+    end: 2024-11-22 16:30:00
+    action: work
+
+  - id: 39
+    employee_id: 2
+    start: 2024-11-25 08:30:00
+    end: 2024-11-25 16:30:00
+    action: work
