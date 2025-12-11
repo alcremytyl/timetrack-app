@@ -1,13 +1,15 @@
 from contextlib import contextmanager
-from pprint import pprint
+from datetime import datetime
 from mariadb import Cursor, Connection, connect
 
 from employee import Employee
+from globals import TIME_STORE_FORMAT
 from timestamp import Timestamp
 
 """
 Database tools
 """
+
 
 QUERIES = {
     "get_all_employees": "SELECT * FROM employees;",
@@ -24,7 +26,12 @@ QUERIES = {
         INNER JOIN employees e
                 ON e.id = t.employee_id
         WHERE e.id=?;
-    """
+    """,
+    "add_employeee":"""
+        INSERT INTO employees (fname, lname, active, address, hire_date) 
+        VALUES (?,?,?,?,?);
+    """,
+    "toggle_employee_active":"UPDATE employees SET active = NOT active WHERE id=?;",
 }
 
 
@@ -76,3 +83,20 @@ def get_timestamps_from_employee(id: int) -> list[Timestamp]:
     with cursor() as cur:
         cur.execute(QUERIES["get_timestamps_from_employee"], (id,))
         return [Timestamp(**ts) for ts in cur.fetchall()] #pyright:ignore
+
+def add_employee(fname:str, lname:str, active:bool, address:str, hire_date:datetime):
+    with cursor() as cur:
+        cur.execute(
+            QUERIES["add_employeee"],
+            (fname, lname, active, address, hire_date.strftime(TIME_STORE_FORMAT))
+        )
+
+        cur.execute("SELECT LAST_INSERT_ID();")
+        if (_data:=cur.fetchone()) is not None:
+            return Employee(_data['LAST_INSERT_ID()'], fname, lname,address,hire_date, active)
+        else:
+            raise ValueError("Failed to insert")
+
+def toggle_employee_active(emp_id: int):
+    with cursor() as cur:
+        cur.execute(QUERIES["toggle_employee_active"], (emp_id,))

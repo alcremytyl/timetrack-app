@@ -1,0 +1,2 @@
+TIME_DISPLAY_FORMAT="%I:%M %p"
+TIME_STORE_FORMAT="%Y-%m-%d"

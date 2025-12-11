@@ -18,9 +18,10 @@ CREATE TABLE IF NOT EXISTS timestamps (
     end_time    TIMESTAMP   NOT NULL,
     action      ENUM('work', 'break') NOT NULL,
     
-    FOREIGN KEY (employee_id) REFERENCES employees(id)
+    FOREIGN KEY (employee_id) 
+      REFERENCES employees(id)
+      ON DELETE CASCADE
 );
-
 INSERT INTO employees (fname, lname, active, address, hire_date) VALUES
 ('John', 'Doe', 1, '123 Main St, Anchorage, AK 99501', '2023-08-15'),
 ('Alice', 'Smith', 1, '45 Oak Ave, Miami, FL 33101', '2021-04-01'),
