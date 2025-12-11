@@ -13,3 +13,6 @@ class Employee:
     # pay: dict[str,str|int] # Pay
     hire_date: datetime
     active: bool
+
+    def display_name(self):
+        return f"{self.lname}, {self.fname}"

@@ -7,10 +7,10 @@ from typing_extensions import Literal
 class Timestamp:
     id: int
     employee_id: int
-    start: datetime
-    end: datetime
+    start_time: datetime
+    end_time: datetime
     action: Literal['work', 'break']
 
     @property
     def delta(self):
-        return self.end - self.start 
+        return self.end_time - self.start_time

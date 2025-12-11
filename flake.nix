@@ -11,8 +11,10 @@
         django
         flask
         requests
+        textual
         mariadb
         pyyaml
+        mypy
     ]
   );
   in {
@@ -24,6 +26,7 @@
         ];
         shellHook = ''
           export FLAKE_DIR=$(pwd)
+          export PYTHONPATH=$PYTHONPATH:$(echo ${py}/lib/python*/site-packages)
         '';
       };
   };

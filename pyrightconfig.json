@@ -1,0 +1,6 @@
+{
+  "stubPath": "stubs",
+  "typeCheckingMode": "basic",
+  "reportUnknownMemberType": false,
+  "reportUnknownArgumentType": false
+}
